@@ -13,11 +13,10 @@ router.get("/phones", (req, res) => {
 
 router.get("/phones/:id", (req, res) => {
   const { id } = req.params;
-  // console.log(typeof id);
   let output = {};
   for (const key in phoneData) {
     const element = phoneData[key];
-    console.log(element.id);
+    // console.log(element.id);
     if (+id === element.id) {
       output = element;
     }
